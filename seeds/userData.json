@@ -1,0 +1,20 @@
+[
+  {
+    "first_name": "Dominic",
+    "last_name": "Toretto",
+    "email_address": "dtorreto@email.com",
+    "password": "family10"
+  },
+  {
+    "first_name": "Brian",
+    "last_name": "O'Conner",
+    "email_address": "brianoconner@email.com",
+    "password": "dropitcuh"
+  },
+  {
+    "first_name": "Han",
+    "last_name": "Lue",
+    "email_address": "hlue@email.com",
+    "password": "backagain"
+  }
+]

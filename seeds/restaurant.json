@@ -1,0 +1,74 @@
+[
+    {
+      "id": "xoi7Cw7FoknAx5p880RtWQ",
+      "name": "Au Cheval",
+      "url": "https://www.yelp.com/biz/au-cheval-chicago?adjust_creative=ORTxa7DAOc8UT7W32Nd2Hw&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=ORTxa7DAOc8UT7W32Nd2Hw",
+      "display_phone": "(312) 929-4580",
+      "categories": [
+        {
+          "title": "Bars"
+        },
+        {
+          "title": "American (Traditional)"
+        }
+      ],
+      "location": {
+        "formatted_address": "800 W Randolph St\nChicago, IL 60607"
+      },
+      "hours": [
+        {
+          "is_open_now": false
+        }
+      ]
+    },
+    {
+      "id": "PZe0q_153VHUnaR-8dOTJg",
+      "name": "The Dearborn",
+      "url": "https://www.yelp.com/biz/the-dearborn-chicago-2?adjust_creative=ORTxa7DAOc8UT7W32Nd2Hw&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=ORTxa7DAOc8UT7W32Nd2Hw",
+      "display_phone": "(312) 384-1242",
+      "categories": [
+        {
+          "title": "Seafood"
+        },
+        {
+          "title": "American (Traditional)"
+        },
+        {
+          "title": "Breakfast & Brunch"
+        }
+      ],
+      "location": {
+        "formatted_address": "145 N Dearborn St\nChicago, IL 60602"
+      },
+      "hours": [
+        {
+          "is_open_now": false
+        }
+      ]
+    },
+    {
+      "id": "3Q_N0K28SRJbPy2sz0QqVw",
+      "name": "Prime & Provisions",
+      "url": "https://www.yelp.com/biz/prime-and-provisions-chicago-5?adjust_creative=ORTxa7DAOc8UT7W32Nd2Hw&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=ORTxa7DAOc8UT7W32Nd2Hw",
+      "display_phone": "(312) 726-7777",
+      "categories": [
+        {
+          "title": "American (Traditional)"
+        },
+        {
+          "title": "Seafood"
+        },
+        {
+          "title": "Steakhouses"
+        }
+      ],
+      "location": {
+        "formatted_address": "222 N Lasalle St\nChicago, IL 60601"
+      },
+      "hours": [
+        {
+          "is_open_now": true
+        }
+      ]
+    }
+  ]
