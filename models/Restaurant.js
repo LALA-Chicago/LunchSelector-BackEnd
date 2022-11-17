@@ -27,3 +27,7 @@ const restaurantSchema = new Schema({
         required: true,
     }
 });
+
+const Restaurant = model('Restaurant', restaurantSchema);
+
+module.exports = Restaurant;
