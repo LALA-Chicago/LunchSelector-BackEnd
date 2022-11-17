@@ -1,15 +1,12 @@
-const { Schema, model } = require('moongose');
+const { Schema, model, Types } = require('moongose');
 
 const userSchema = new Schema(
   {
-    id: {
-      type: Number
+    userId: {
+      type: Types.ObjectId,
+      default: new Types.ObjectId,
     },
-    firstName: {
-      type: String,
-      require: true,
-    },
-    lastName: {
+    username: {
       type: String,
       require: true,
     },
@@ -24,6 +21,16 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: true,
-    }
+    },
+    collection: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Collection'
+      }
+    ]
   }
-)
+);
+
+const User = model('user', userSchema);
+
+module.exports = User;
