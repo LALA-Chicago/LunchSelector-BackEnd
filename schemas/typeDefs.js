@@ -10,14 +10,13 @@ const typeDefs = gql`
 
   type Restaurant {
     _id: ID!
+    restaurantId: String!
     name: String!
-    url: String
+    image_url: String
     display_phone: String
-
     categories: String
     location: String
-    hours: String
-    open_is_now: Boolean!
+    is_closed: Boolean!
   }
 
   type Query { 
@@ -27,7 +26,7 @@ const typeDefs = gql`
   }
 
   type Mutation { 
-    addRestaurant(name: String!, url: String, display_phone: String, categories: String, location: String, hours: String, is_open_now: Boolean!) : Restaurant
+    addRestaurant(restaurantId: String!, name: String!, image_url: String, display_phone: String, categories: String, location: String, is_closed: Boolean!) : Restaurant
   }
 `;
 

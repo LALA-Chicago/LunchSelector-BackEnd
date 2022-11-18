@@ -21,7 +21,7 @@ fetch(`https://api.yelp.com/v3/businesses/search?location=${query}`, requestOpti
   .then((items => { 
         // console.log(items)
         const restaurantData = items.businesses.map((restaurant) => ({
-          id: restaurant.id,
+          restaurantId: restaurant.id,
           name: restaurant.name,
           image_url: restaurant.image_url,
           categories: restaurant.categories[0].title,
