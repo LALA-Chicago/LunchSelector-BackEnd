@@ -13,9 +13,9 @@ const typeDefs = gql`
     name: String!
     url: String
     display_phone: String
-    categories: Map
-    location: Map
-    hours: Map
+    categories: String
+    location: String
+    hours: String
     open_is_now: Boolean!
   }
 
@@ -25,7 +25,7 @@ const typeDefs = gql`
   }
 
   type Mutation { 
-    addRestaurant(name: String!, url: String, display_phone: Number, categories: Map, location: Map, hours: Map, is_open_now: Boolean!) : Restaurant
+    addRestaurant(name: String!, url: String, display_phone: String, categories: String, location: String, hours: String, is_open_now: Boolean!) : Restaurant
   }
 `;
 

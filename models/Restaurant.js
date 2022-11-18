@@ -1,4 +1,4 @@
-const { Schema, Types } = require('mongoose')
+const { Schema, model, Types } = require('mongoose')
 
 const restaurantSchema = new Schema({
     restaurantId: {
@@ -16,18 +16,17 @@ const restaurantSchema = new Schema({
         type: String,
     },
     categories: {
-        type: Map,
-        of: String
+        type: String,
     },
     location: {
-        type: Map,
+        type: String,
     },
     hours: {
-        type: Map,
+        type: String,
     },
     is_open_now: {
         type: Boolean,
-        required: true,
+        // required: true,
     }
 });
 
