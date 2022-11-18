@@ -13,19 +13,20 @@ const typeDefs = gql`
     name: String!
     url: String
     display_phone: String
-    categories: Map
-    location: Map
-    hours: Map
-    open_is_now: Boolean!
+    categories: Array
+    location: Array
+    hours: Array
+    open_is_now: Array
   }
 
   type Query { 
     user: [User]
     restaurant(_id: String): [Restaurant]
+    userCollection(_id: String): [Restaurant]
   }
 
   type Mutation { 
-    addRestaurant(name: String!, url: String, display_phone: Number, categories: Map, location: Map, hours: Map, is_open_now: Boolean!) : Restaurant
+    addRestaurant(name: String!, url: String, display_phone: String, categories: Array, location: Array, hours: Array, is_open_now: Boolean!) : Restaurant
   }
 `;
 

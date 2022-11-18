@@ -22,7 +22,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    collection: [
+    restaurants: [
       {
         type: Schema.Types.ObjectId,
         ref: 'Restaurant'
@@ -31,6 +31,6 @@ const userSchema = new Schema(
   }
 );
 
-const User = model('user', userSchema);
+const User = model('User', userSchema);
 
 module.exports = User;
