@@ -13,6 +13,7 @@ const typeDefs = gql`
     name: String!
     url: String
     display_phone: String
+
     categories: String
     location: String
     hours: String
@@ -22,6 +23,7 @@ const typeDefs = gql`
   type Query { 
     user: [User]
     restaurant(_id: String): [Restaurant]
+    userCollection(_id: String): [Restaurant]
   }
 
   type Mutation { 
