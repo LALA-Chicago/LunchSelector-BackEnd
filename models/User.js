@@ -1,11 +1,11 @@
-const { Schema, model, Types } = require('moongose');
+const { Schema, model, Types } = require('mongoose');
 
 const userSchema = new Schema(
   {
-    userId: {
-      type: Types.ObjectId,
-      default: new Types.ObjectId,
-    },
+    // userId: {
+    //   type: Types.ObjectId,
+    //   default: new Types.ObjectId,
+    // },
     username: {
       type: String,
       require: true,
@@ -25,7 +25,7 @@ const userSchema = new Schema(
     collection: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Collection'
+        ref: 'Restaurant'
       }
     ]
   }
