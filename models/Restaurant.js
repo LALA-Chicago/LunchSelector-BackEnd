@@ -16,16 +16,17 @@ const restaurantSchema = new Schema({
         type: String,
     },
     categories: {
-        type: Array
+        type: String,
     },
     location: {
-        type: Array,
+        type: String,
     },
     hours: {
-        type: Array,
+        type: String,
     },
     is_open_now: {
-        type: Array,
+        type: Boolean,
+        // required: true,
     }
 });
 
