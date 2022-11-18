@@ -6,6 +6,7 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
+    favoritesRestaurant:[Restaurant]
   }
 
   type Restaurant {
@@ -21,7 +22,7 @@ const typeDefs = gql`
 
   type Query { 
     user: [User]
-    restaurant(_id: String): [Restaurant]
+    restaurant(restaurantId: String): [Restaurant]
     userCollection(_id: String): [Restaurant]
   }
 
