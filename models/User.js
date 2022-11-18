@@ -22,7 +22,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    collection: [
+    favoritesRestaurant: [
       {
         type: Schema.Types.ObjectId,
         ref: 'Restaurant'
