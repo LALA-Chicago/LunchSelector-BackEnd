@@ -1,15 +1,15 @@
-const { Schema, model, Types } = require('mongoose')
+const { Schema, model } = require('mongoose')
 
 const restaurantSchema = new Schema({
     restaurantId: {
-        type: Types.ObjectId,
-        default: new Types.ObjectId,
+        type: String,
+        required: true,
     },
     name: {
         type: String,
         required: true,
     },
-    url: {
+    image_url: {
         type: String,
     },
     display_phone: {
@@ -21,10 +21,7 @@ const restaurantSchema = new Schema({
     location: {
         type: String,
     },
-    hours: {
-        type: String,
-    },
-    is_open_now: {
+    is_closed: {
         type: Boolean,
         // required: true,
     }
