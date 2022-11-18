@@ -13,14 +13,17 @@ const restaurantSchema = new Schema({
         type: String,
     },
     display_phone: {
-        type: Number,
+        type: String,
     },
     categories: {
         type: Map,
         of: String
     },
     location: {
-        type: String,
+        type: Map,
+    },
+    hours: {
+        type: Map,
     },
     is_open_now: {
         type: Boolean,
