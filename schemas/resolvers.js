@@ -8,13 +8,14 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username });
     },
-    restaurant: async (parent, {_id}) => {
-      const params = _id ? { _id } : {};
-      return Restaurant.find(params)
+    restaurant: async (parent, {restaurantId}) => {
+      // const params = _id ? { _id } : {};
+      return Restaurant.findOne({_id: restaurantId})
+      
     },
     // userCollection: async (parent, {_id}) => {
     //   const params = _id ? { _id } : {};
-    //   return User.find(params)
+    //   return Restaurant.find(params)
     // },
   },
   Mutation: {
