@@ -15,9 +15,19 @@ const resolvers = {
     // },
   },
   Mutation: {
+    addToUserCollection: async (parent, { userId, restaurantId }) => {
+      return User.findOneAndUpdate(
+        {_id: userId},
+        {
+          $addToSet: { favoritesRestaurant: { restaurantId } }
+        },
+        {
+          new: true,
+        }
+      )
+    },
     addRestaurant: async (parent, args) => {
-      const restaurant = await Restaurant.create(args);
-      return restaurant;
+      return Restaurant.create(args);
     },
   },
 };
