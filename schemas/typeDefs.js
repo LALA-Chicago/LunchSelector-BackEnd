@@ -20,15 +20,23 @@ const typeDefs = gql`
     is_closed: Boolean!
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Query { 
-    user: [User]
+    users: [User]
+    user(username: String!): User
     restaurant(restaurantId: String): [Restaurant]
     userCollection(_id: String): [Restaurant]
   }
 
   type Mutation { 
+    addProfile(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
     addRestaurant(restaurantId: String!, name: String!, image_url: String, display_phone: String, categories: String, location: String, is_closed: Boolean!) : Restaurant
-    addToUserCollection(restaurantId: Restaurant, userId: ID!) : User
+    addToUserCollection(restaurantId: String, userId: ID!) : User
   }
 `;
 
