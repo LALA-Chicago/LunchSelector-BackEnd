@@ -2,7 +2,8 @@
   {
     "username": "Dominic",
     "email": "dtorreto@email.com",
-    "password": "family10"
+    "password": "family10",
+    "favoritesRestaurant": []
   },
   {
     "username": "Brian",

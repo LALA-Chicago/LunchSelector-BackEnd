@@ -16,13 +16,14 @@ const resolvers = {
   },
   Mutation: {
     addToUserCollection: async (parent, { userId, restaurantId }) => {
-      return User.findOneAndUpdate(
+      return await User.findOneAndUpdate(
         {_id: userId},
         {
-          $addToSet: { favoritesRestaurant: { restaurantId } }
+          $addToSet: { favoritesRestaurant: restaurantId }
         },
         {
           new: true,
+          runValidators: true,
         }
       )
     },
