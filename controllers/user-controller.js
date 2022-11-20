@@ -12,5 +12,25 @@ module.exports = {
     }
 
     res.json(foundUser);
+  },
+  async addProfile({ body }, res) {
+   const user = await User.create(body);
+
+   if (!user) {
+    return res.status(400).json({ message: 'Something is wrong!' })
+   }
+   const token = signToken(user);
+   res.json({ token, user })
+  },
+  async login({ body }, res) {
+    const user = await User.findOne({ $or: [{ username: body.username }, { email: body.email }]});
+    const correctPw = await user.isCorrectPassword(body.password);
+
+    if (!user || !correctPw) {
+      return res.status(400).json({ message: 'Wrong user or password, please try again' });
+    }
+
+    const token = signToken(user);
+    res.json({ token, user })
   }
 }
