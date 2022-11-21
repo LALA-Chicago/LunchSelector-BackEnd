@@ -1,10 +1,7 @@
 const { Schema, model } = require('mongoose')
 
 const restaurantSchema = new Schema({
-    restaurantId: {
-        type: String,
-        required: true,
-    },
+    
     name: {
         type: String,
         required: true,
@@ -21,10 +18,6 @@ const restaurantSchema = new Schema({
     location: {
         type: String,
     },
-    is_closed: {
-        type: Boolean,
-        // required: true,
-    }
 });
 
 const Restaurant = model('Restaurant', restaurantSchema);
