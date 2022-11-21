@@ -10,12 +10,15 @@ const resolvers = {
     users: async () => {
       return User.find();
     },
+    restaurants: async () => {
+      return Restaurant.find();
+    },
     user: async (parent, { username }) => {
       return User.findOne({ username });
     },
-    restaurant: async (parent, {restaurantId}) => {
+    restaurant: async (parent, {restaurantName}) => {
       // const params = _id ? { _id } : {};
-      return Restaurant.findOne({_id: restaurantId})
+      return Restaurant.findOne({name: restaurantName})
       
     },
     // userCollection: async (parent, {_id}) => {
@@ -29,11 +32,13 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addToUserCollection: async (parent, { userId, restaurantId }) => {
+    addToUserCollection: async (parent, { email, restaurantName }) => {
+      let add = await Restaurant.findOne({name: restaurantName})
+      
       return await User.findOneAndUpdate(
-        {_id: userId},
+        {email: email},
         {
-          $addToSet: { favoritesRestaurant: restaurantId }
+          $addToSet: { favoritesRestaurant: add._id }
         },
         {
           new: true,
