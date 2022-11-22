@@ -49,11 +49,11 @@ const resolvers = {
     addRestaurant: async (parent, args) => {
       return Restaurant.create(args);
     },
-    addProfile: async (parent, { username, email, password }) => {
-      const user = await User.create({ username, email, password });
-      const token = signToken(user);
-      return { token, user };
-    },
+    // addProfile: async (parent, { username, email, password }) => {
+    //   const user = await User.create({ username, email, password });
+    //   const token = signToken(user);
+    //   return { token, user };
+    // },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
