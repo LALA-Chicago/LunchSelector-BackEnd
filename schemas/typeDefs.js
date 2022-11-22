@@ -34,7 +34,7 @@ const typeDefs = gql`
   type Mutation { 
     addProfile(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addRestaurant(name: String!, image_url: String, display_phone: String, categories: String, location: String): Restaurant
+    addRestaurant(name: String!, image_url: String, location: String, display_phone: String,): Restaurant
     addToUserCollection(restaurantName: String!, email: String!) : User
   }
 `;
